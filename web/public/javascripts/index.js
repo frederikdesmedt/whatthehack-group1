@@ -1,10 +1,5 @@
 var previousPlaceIds = [];
 
-function playAudio(audioUrl) {
-    var audio = new Audio(audioUrl);
-    return audio.play();
-}
-
 function getNearbyLocations() {
     var listGenerator = document.getElementById("places-list-generator").innerText;
     var template = Handlebars.compile(listGenerator);

@@ -10,4 +10,8 @@ router.get('/page2', (req, res, next) => {
   res.render('page2');
 });
 
+router.get('/guide/:guideId', (req, res, next) => {
+  res.render('page4');
+});
+
 module.exports = router;

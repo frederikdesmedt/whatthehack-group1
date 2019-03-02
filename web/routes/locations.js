@@ -8,6 +8,17 @@ Mongo.connect('mongodb://localhost:27017').then((client, err) => {
   } else {
     var places = client.db('visitleuven').collection('places');
 
+    router.get('/place/:placeId', function(req, res, next) {
+      var placeId = req.params.placeId;
+      places.find({'id': Number(placeId)}).toArray((err, places) => {
+        console.log(placeId + ': ' + places);
+        if (err) {
+          console.log(err);
+        }
+        res.send(places[0]);
+      })
+    });
+
     /* GET nearest location. */
     router.get('/nearby', function (req, res, next) {
       var lat = Number(req.query['lat']);
