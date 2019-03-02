@@ -31,8 +31,8 @@ function addAudio(client, callback) {
   }, {
     '$set': {
       'audio': {
-        'main': '/audio/sint-pieter/main.mp3',
-        'Tell me something about the painter': '/audio/sint-pieter/painter.mp3',
+        'main': '/audio/sint-pieter/main.m4a',
+        'Tell me something about the painter': '/audio/sint-pieter/painter.m4a',
         "Is there really a treasure?": '/#',
         'When will the restaurations be completed?': '/#'
       }
