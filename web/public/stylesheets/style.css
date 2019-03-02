@@ -1,4 +1,4 @@
-body {
+/* body {
   padding: 50px;
   font: 24px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center 
@@ -10,4 +10,10 @@ h1, h2, h3, h4, h5 {
 
 a {
   color: #2baa9c;
+} */
+
+.btn-option {
+  height: 50px;
+  padding-left: 35px;
+  padding-right: 35px;
 }

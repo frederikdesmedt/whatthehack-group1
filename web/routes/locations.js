@@ -7,6 +7,7 @@ Mongo.connect('mongodb://localhost:27017').then((client, err) => {
     console.log(err)
   } else {
     var places = client.db('visitleuven').collection('places');
+
     /* GET nearest location. */
     router.get('/nearby', function (req, res, next) {
       var lat = Number(req.query['lat']);
@@ -15,10 +16,16 @@ Mongo.connect('mongodb://localhost:27017').then((client, err) => {
         if (err) {
           console.log(err);
         } else {
-          res.send(places.filter((place) => {
+          res.send(places.filter(place => {
             return getDistanceFromLatLonInKm(lat, long, place.lat, place.long) < 0.1;
+          }).sort((placeA, placeB) => {
+            var distancePlaceA = getDistanceFromLatLonInKm(lat, long, placeA.lat, placeA.long);
+            var distancePlaceB = getDistanceFromLatLonInKm(lat, long, placeB.lat, placeB.long);
+            return distancePlaceA - distancePlaceB;
+          }).map(place => {
+            place.distance = getDistanceFromLatLonInKm(lat, long, place.lat, place.long);
+            return place;
           }));
-          next();
         }
       });
     });
