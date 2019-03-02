@@ -1,0 +1,12 @@
+<h1>Welcome to Leuven</h1>
+<div id="places-list"></div>
+<button id="nearby-locations">
+    Get test nearby locations
+</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.js"></script>
+<script src="javascripts/index.js"></script>
+<script id="places-list-generator" type="text/x-handlebars-template">
+    \{{#list places}}
+        <a onclick="playAudio(\{{audio}})">\{{name}}</a>
+    \{{/list}}
+</script>
