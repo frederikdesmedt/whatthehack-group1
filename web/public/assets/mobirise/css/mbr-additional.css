@@ -13,6 +13,9 @@ body {
 .mbr-section-title {
   font-style: normal;
   line-height: 1.2;
+  font-family:'Quicksand';
+  font-weight:bold;
+  margin:5px;
 }
 .mbr-section-subtitle {
   line-height: 1.3;
@@ -78,8 +81,11 @@ body {
     line-height: calc( 1.4 * (1rem + (1 - 1) * ((100vw - 20rem) / (48 - 20))));
   }
   .display-5 {
+    align-items: center;
+    text-align: center;
     font-size: 1.2rem;
-    font-size: calc( 1.175rem + (1.5 - 1.175) * ((100vw - 20rem) / (48 - 20)));
+    font-size: calc( 1.25rem + (1.5 - 1.175) * ((100vw - 20rem) / (48 - 20)));
+    font-weight: bold;
     line-height: calc( 1.4 * (1.175rem + (1.5 - 1.175) * ((100vw - 20rem) / (48 - 20))));
   }
 }
@@ -1388,7 +1394,7 @@ body {
   background-image: url("../../../assets/images/leuven-b-640x960.png");
 }
 .cid-rjyY3kxbY7 {
-  background: linear-gradient(45deg, #e50852, #e50852);
+  background: linear-gradient(45deg, #28ab9d, #7ce0d6);
 }
 .cid-rjz3yjwKaG {
   padding-top: 45px;
@@ -1441,24 +1447,23 @@ body {
   }
 }
 .cid-rjyWUOGqMI {
-  background: linear-gradient(45deg, #28ab9d, #28ab9d);
+  background: linear-gradient(45deg, #7ce0d6, #28ab9d);
 }
 .cid-rjz40CflOi {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  position: relative;
-  background-color: #ffffff;
+  background: linear-gradient(45deg, #e50852, #f9568d);
 }
 .cid-rjz40CflOi p {
-  color: #767676;
+  color: #28ab9d;
 }
 .cid-rjz40CflOi .mbr-section-subtitle {
   color: #767676;
   font-weight: 300;
 }
-.cid-rjz40CflOi .toggle-content {
+
+.cid-rjz40CflOi .mbr-fullscreen {
   flex-basis: 100%;
   -webkit-flex-basis: 100%;
+  flex-direction: column;
 }
 .cid-rjz40CflOi .card {
   border-radius: 0px;
@@ -1468,6 +1473,7 @@ body {
   border-radius: 0px;
   border: 0px;
   padding: 0;
+
 }
 .cid-rjz40CflOi .card .card-header a.panel-title {
   margin-bottom: 0;
@@ -1522,4 +1528,16 @@ body {
 }
 .cid-rjz5mwv076 textarea.form-control {
   min-height: 188px;
+}
+
+.cid-rjz40CflOi summary{
+  font-family: "Raleway";
+  font-size: 24px;
+  font-weight:bold;
+}
+
+.cid-rjz40CflOi p1{
+  font-family: "Raleway";
+  font-size:18px;
+  text-align:center;
 }
